@@ -7,7 +7,7 @@ math:
 license: 
 hidden: false
 comments: true
-draft: true
+draft: false
 image: 222.png
 ---
 # TransBridge，把大模型接当做标准机器翻译接口
