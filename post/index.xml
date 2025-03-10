@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on fruitbars的Blog</title><link>https://fruitbars.github.io/post/</link><description>Recent content in Posts on fruitbars的Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 09 Mar 2025 01:40:04 +0800</lastBuildDate><atom:link href="https://fruitbars.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>TransBridge，把大模型接当做标准机器翻译接口</title><link>https://fruitbars.github.io/p/transbridge%E6%8A%8A%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8E%A5%E5%BD%93%E5%81%9A%E6%A0%87%E5%87%86%E6%9C%BA%E5%99%A8%E7%BF%BB%E8%AF%91%E6%8E%A5%E5%8F%A3/</link><pubDate>Sun, 09 Mar 2025 01:40:04 +0800</pubDate><guid>https://fruitbars.github.io/p/transbridge%E6%8A%8A%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8E%A5%E5%BD%93%E5%81%9A%E6%A0%87%E5%87%86%E6%9C%BA%E5%99%A8%E7%BF%BB%E8%AF%91%E6%8E%A5%E5%8F%A3/</guid><description>&lt;img src="https://fruitbars.github.io/p/transbridge%E6%8A%8A%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8E%A5%E5%BD%93%E5%81%9A%E6%A0%87%E5%87%86%E6%9C%BA%E5%99%A8%E7%BF%BB%E8%AF%91%E6%8E%A5%E5%8F%A3/111.jpg" alt="Featured image of post TransBridge，把大模型接当做标准机器翻译接口" />&lt;h1 id="transbridge把大模型接当做标准机器翻译接口">TransBridge，把大模型接当做标准机器翻译接口
+&lt;/h1>&lt;h2 id="项目背景">项目背景
+&lt;/h2>&lt;p>随着大语言模型（LLM）的迅速发展，机器翻译的效果得到了极大的提升，越来越多的翻译需求开始从传统的机器翻译，转向基于大模型的机器翻译。有没有非常方便的调用大语言模型来进行翻译的服务呢？&lt;/p>
+&lt;p>为了解决这一问题，&lt;strong>TransBridge&lt;/strong> 项目应运而生。它通过&lt;strong>统一的标准接口&lt;/strong>，兼容 DeepL API 格式，将底层的多种大模型翻译能力无缝接入，从而极大降低大模型翻译的使用门槛。&lt;/p>
+&lt;h2 id="项目特点">项目特点
+&lt;/h2>&lt;ul>
+&lt;li>🚀 &lt;strong>多提供商支持&lt;/strong>
+兼容OpenAI API标准接口各个厂商，包括但不限于 OpenAI、DeepSeek、ChatGLM 等，灵活切换翻译来源。&lt;/li>
+&lt;li>⚖️ &lt;strong>多模型负载均衡&lt;/strong>
+支持根据模型质量、调用价格、响应速度等自定义&lt;strong>模型权重&lt;/strong>，实现智能路由和动态负载均衡。&lt;/li>
+&lt;li>⚡ &lt;strong>多级缓存机制&lt;/strong>
+提供&lt;strong>内存缓存&lt;/strong>与&lt;strong>Redis缓存&lt;/strong>，可根据需求配置缓存粒度与失效策略，减少重复翻译带来的成本与延迟。即使服务重启，使用redis可以快速查找到缓存。&lt;/li>
+&lt;li>🔗 &lt;strong>DeepL API兼容&lt;/strong>
+DeepL是传统机器翻译的佼佼者，因此完全兼容 DeepL API 接口格式，已有使用 DeepL API 的业务可&lt;strong>0成本迁移&lt;/strong>到大模型翻译。&lt;/li>
+&lt;li>🔒 &lt;strong>认证与访问控制&lt;/strong>
+支持 API Key 鉴权，方便开放服务或与业务系统集成时进行权限管理。&lt;/li>
+&lt;li>📊 &lt;strong>全流程日志记录&lt;/strong>
+内置&lt;strong>异步日志系统&lt;/strong>，记录翻译请求与响应，支持日志轮转，方便问题追溯与监控分析。&lt;/li>
+&lt;li>💨 &lt;strong>高性能设计&lt;/strong>
+基于&lt;strong>异步架构&lt;/strong>，结合缓存优化与并发处理，确保高并发场景下的稳定响应。&lt;/li>
+&lt;li>🧰 &lt;strong>跨平台支持&lt;/strong>
+兼容 Linux、macOS 和 Windows，支持容器化部署。&lt;/li>
+&lt;/ul>
+&lt;h2 id="项目链接">项目链接
+&lt;/h2>&lt;ul>
+&lt;li>
+&lt;p>📦 仓库地址：&lt;a class="link" href="https://github.com/fruitbars/transbridge" target="_blank" rel="noopener"
+>https://github.com/fruitbars/transbridge&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>🌐 演示地址：&lt;a class="link" href="https://fruitbars.github.io/transbridge/" target="_blank" rel="noopener"
+>https://fruitbars.github.io/transbridge/&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>🔗 接入地址：https://freeapi.fanyimao.cn/
+用这个key（tr-98584e33-f387-42cc-a467-f02513bd400d）就行了。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl --location --request POST &lt;span class="s1">&amp;#39;https://freeapi.fanyimao.cn/translate&amp;#39;&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>--header &lt;span class="s1">&amp;#39;Authorization: Bearer tr-98584e33-f387-42cc-a467-f02513bd400d&amp;#39;&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>--header &lt;span class="s1">&amp;#39;Content-Type: application/json&amp;#39;&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>--data-raw &lt;span class="s1">&amp;#39;{
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s1"> &amp;#34;text&amp;#34;: &amp;#34;Hello, world!&amp;#34;,
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s1"> &amp;#34;source_lang&amp;#34;: &amp;#34;&amp;#34;,
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s1"> &amp;#34;target_lang&amp;#34;: &amp;#34;ZH&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s1">}&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ul></description></item></channel></rss>
