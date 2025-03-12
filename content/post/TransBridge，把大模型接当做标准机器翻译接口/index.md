@@ -52,7 +52,7 @@ image: 111.jpg
   curl --location --request POST 'https://freeapi.fanyimao.cn/translate' \
   --header 'Authorization: Bearer tr-98584e33-f387-42cc-a467-f02513bd400d' \
   --header 'Content-Type: application/json' \
-  --data-raw '{
+  --data '{
     "text": "Hello, world!",
     "source_lang": "",
     "target_lang": "ZH"
