@@ -7,7 +7,7 @@ math:
 license: 
 hidden: false
 comments: true
-draft: true
+draft: false
 ---
 > pulseai 针对 mistral ocr 做了个测试，发现这个“世界最强 OCR”虽然效果还不错，但不至于哪都能打，吹嘘有点过了。
 > 
